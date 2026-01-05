@@ -74,12 +74,13 @@ namespace Employee3_tier
             int Empid = Convert.ToInt32(txtEmpid.Text);
             string Empname = txtEmpname.Text;
             string Email = txtEmail.Text;
+            string Location=txtLocation.Text;
             double salary = Convert.ToDouble(txtSalary.Text);
             int cid = Convert.ToInt32(ddlcountry.SelectedValue);
             int stid = Convert.ToInt32(ddlstate.SelectedValue);
             int cityid = Convert.ToInt32(ddlcity.SelectedValue);
 
-            int i = objbll.InsertEmployee(Empid, Empname, Email, salary, cid, stid, cityid);
+            int i = objbll.InsertEmployee(Empid, Empname, Email,Location, salary, cid, stid, cityid);
 
             if (i > 0)
             {
@@ -125,12 +126,13 @@ namespace Employee3_tier
             int id = Convert.ToInt32(txtEmpid.Text);
             string name = txtEmpname.Text;
             string email = txtEmail.Text;
+            string Location=txtLocation.Text;
             double salary = Convert.ToDouble(txtSalary.Text);
             int cid = Convert.ToInt32(ddlcountry.SelectedValue);
             int stid = Convert.ToInt32(ddlstate.SelectedValue);
             int cityid = Convert.ToInt32(ddlcity.SelectedValue);
 
-            int i = objbll.UpdateEmployee(id, name, email, salary, cid, stid, cityid);
+            int i = objbll.UpdateEmployee(id, name, email,Location, salary, cid, stid, cityid);
 
             if (i > 0)
             {

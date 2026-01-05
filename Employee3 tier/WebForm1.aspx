@@ -22,6 +22,9 @@
             Enter salary;
             <asp:TextBox ID="txtSalary" runat="server"></asp:TextBox>
             <br /><br />
+            Enter Location;
+            <asp:TextBox ID="txtLocation" runat="server"></asp:TextBox>
+            <br /><br />
             Country 
             <asp:DropDownList ID="ddlcountry" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlcountry_SelectedIndexChanged">
             </asp:DropDownList>

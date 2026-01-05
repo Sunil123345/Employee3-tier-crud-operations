@@ -14,6 +14,7 @@ namespace DAL
         public string Empname { get; set; }
 
         public string Email { get; set; }
+        public string Location { get; set; }
         public double salary { get; set; }
 
         public int cid { get; set; }
@@ -68,13 +69,14 @@ namespace DAL
             return dt;
         }
 
-        public int InsertEmployee(int Empid, string Empname, string Email, double salary, int cid, int stid, int cityid)
+        public int InsertEmployee(int Empid, string Empname, string Email,string Loation, double salary, int cid, int stid, int cityid)
         {
-            cmd = new SqlCommand("insert into employee3(Empid,Empname,Email,salary,cid,stid,city) " +
-                     "values(@Empid,@Empname,@Email,@salary,@cid,@stid,@city)", conn);
+            cmd = new SqlCommand("insert into employee3(Empid,Empname,Email,Location,salary,cid,stid,city) " +
+                     "values(@Empid,@Empname,@Email,@Location,@salary,@cid,@stid,@city)", conn);
             cmd.Parameters.AddWithValue("@Empid", Empid);
             cmd.Parameters.AddWithValue("@Empname", Empname);
             cmd.Parameters.AddWithValue("@Email", Email);
+            cmd.Parameters.AddWithValue("@Location", Loation);
             cmd.Parameters.AddWithValue("@salary", salary);
             cmd.Parameters.AddWithValue("@cid", cid);
             cmd.Parameters.AddWithValue("@stid", stid);
@@ -87,12 +89,13 @@ namespace DAL
         }
 
 
-        public int UpdateEmployee(int Empid, string Empname, string Email, double salary, int cid, int stid, int cityid)
+        public int UpdateEmployee(int Empid, string Empname, string Email,string Location, double salary, int cid, int stid, int cityid)
         {
-            cmd = new SqlCommand(@"update employee set Empname=@Empname,Email=@Email,salary=@salary,cid=@cid,stid=@stid,cityid=@cityid,where Empid=@Empid", conn);
+            cmd = new SqlCommand(@"update employee set Empname=@Empname,Email=@Email,Location=@Location,salary=@salary,cid=@cid,stid=@stid,cityid=@cityid,where Empid=@Empid", conn);
             cmd.Parameters.AddWithValue("@Empid", Empid);
             cmd.Parameters.AddWithValue("@Empname", Empname);
             cmd.Parameters.AddWithValue("@Email", Email);
+            cmd.Parameters.AddWithValue("@Location", Location);
             cmd.Parameters.AddWithValue("@salary", salary);
             cmd.Parameters.AddWithValue("@cid", cid);
             cmd.Parameters.AddWithValue("@stid", stid);

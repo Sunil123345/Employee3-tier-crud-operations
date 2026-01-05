@@ -29,14 +29,14 @@ namespace BAL
             return objdal.GetAllEmployees();
         }
 
-        public int InsertEmployee(int Empid, string Empname, string Email, double salary, int cid, int stid, int cityid)
+        public int InsertEmployee(int Empid, string Empname, string Email,string Location, double salary, int cid, int stid, int cityid)
         {
-            return objdal.InsertEmployee(Empid, Empname, Email, salary, cid, stid, cityid);
+            return objdal.InsertEmployee(Empid, Empname, Email,Location, salary, cid, stid, cityid);
         }
 
-        public int UpdateEmployee(int Empid, string Empname, string Email, double salary, int cid, int stid, int cityid)
+        public int UpdateEmployee(int Empid, string Empname, string Email,string Location, double salary, int cid, int stid, int cityid)
         {
-            return objdal.UpdateEmployee(Empid, Empname, Email, salary, cid, stid, cityid);
+            return objdal.UpdateEmployee(Empid, Empname, Email,Location, salary, cid, stid, cityid);
         }
 
         public int DeleteEmployee(int Empid)
