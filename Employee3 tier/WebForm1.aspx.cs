@@ -105,20 +105,20 @@ namespace Employee3_tier
             lblmsg.Text = "";
         }
 
-        protected void gridemp_RowDeleting(object sender, GridViewDeleteEventArgs e)
-        {
-            int Empid = Convert.ToInt32(gridemp.DataKeys[e.RowIndex].Value);
-            int i = objbll.DeleteEmployee(Empid);
-            if(i>0)
-            {
-                lblmsg.Text = "Employee Deleted successfully";
-            }
-            else
-            {
-                lblmsg.Text = "Employee is not Deleted successfully";
-            }
+        //protected void gridemp_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        //{
+        //    int Empid = Convert.ToInt32(gridemp.DataKeys[e.RowIndex].Value);
+        //    int i = objbll.DeleteEmployee(Empid);
+        //    if(i>0)
+        //    {
+        //        lblmsg.Text = "Employee Deleted successfully";
+        //    }
+        //    else
+        //    {
+        //        lblmsg.Text = "Employee is not Deleted successfully";
+        //    }
 
-        }
+        //}
 
         protected void gridemp_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
